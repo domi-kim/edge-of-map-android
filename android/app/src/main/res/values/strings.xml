@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">지구탐험</string>
+    <string name="title_activity_main">지구탐험</string>
+    <string name="package_name">kr.orock.edgeofmap</string>
+    <string name="custom_url_scheme">kr.orock.edgeofmap</string>
+</resources>

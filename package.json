@@ -1,0 +1,30 @@
+{
+  "name": "edge-of-map-android",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Edge of the Map (지도의 끝) Android app",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc -p .",
+    "dev": "vite",
+    "build": "tsc -p . && vite build",
+    "sync": "npm run build && cap sync android",
+    "apk:debug": "npm run sync && cd android && ./gradlew assembleDebug",
+    "aab:release": "npm run sync && cd android && ./gradlew bundleRelease",
+    "ota:build": "node scripts/ota-build.mjs",
+    "ota:publish": "node scripts/ota-publish.mjs",
+    "apk:release": "npm run sync && cd android && ./gradlew assembleRelease"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.5.3",
+    "@capacitor/app": "^8.1.2",
+    "@capacitor/core": "^8.5.3",
+    "@capacitor/splash-screen": "^8.0.2",
+    "@capawesome/capacitor-live-update": "^8.7.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.5.3",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1"
+  }
+}
